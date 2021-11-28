@@ -141,8 +141,8 @@ for page in range(0, pages - 1):
     # locator for a random option
     select_option_1 = select_option + str(options[page])
     # verify that the same option remained selected
-    assert driver.find_element(By.XPATH, select_option).is_selected()
-    driver.find_element(By.XPATH, select_option).click()
+    assert driver.find_element(By.XPATH, select_option_1).is_selected()
+    driver.find_element(By.XPATH, select_option_1).click()
 
 # 10) Selecting age and sex
 driver.find_element(*age_select).click()
